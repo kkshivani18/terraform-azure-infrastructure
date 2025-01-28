@@ -85,7 +85,7 @@
 
     ![terraform validate](<./images/terraform validate.png>)  
 
-    ![terraform plan](<./images/terraform plan.png>)
+    ![terraform plan upd](<./images/terraform plan upd.png>)
 
 - Apply the configuration to create resources:  
     ```bash
