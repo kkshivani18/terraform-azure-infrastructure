@@ -94,6 +94,30 @@
 
     ![terraform apply](<./images/terraform apply.png>)
 
+- Teraform State List before VM  
+    ![terraform state list 1](<./images/state list bef.png>)
+
+- VM created with SSH key authentication. 
+    - How SSH Key Authentication Works
+        - Generate SSH Key Pair:
+            - Local Machine: Use ssh-keygen to create a key pair.
+            - Private Key: Stored securely on your local machine.
+            - Public Key: Shared with the server (VM).
+
+        - Copy Public Key to VM:
+            - Use Terraform to automatically copy the public key to the VM.
+
+        - Authorized_keys File on VM:
+            - The VM stores allowed public keys in /home/azureuser/.ssh/authorized_keys.
+            - When you SSH into the VM, it checks this file to see if your public key is authorized.
+
+        ![VM created by VM](<./images/vm ssh.png>)  
+
+        ![terraform apply for vm](<./images/vm apply.png>)  
+
+- Terraform State List after VM  
+    ![terraform state list](<./images/state list after.png>)
+
 - Verify Docker installation:  
     - SSH into the VM:  
         ```bash
