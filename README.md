@@ -122,9 +122,16 @@
     - SSH into the VM:  
         ```bash
         ssh azureuser@<VM_PUBLIC_IP>
-        ```
+        ```  
+
+    ![vm via ssh](<./images/vm via ssh.png>)  
+
+    - To know the OS of the system  
+    ![lsb release](<./images/lsb_release.png>)
+
     - Run the Docker version command:  
         ```bash
         docker --version
-        ```
+        ```  
+    ![docker version](<./images/docker version.png>)
 
