@@ -133,5 +133,5 @@
         ```bash
         docker --version
         ```  
-    ![docker version](<./images/docker version.png>)
+        ![docker version](<./images/docker version.png>)
 
