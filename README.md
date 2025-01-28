@@ -123,7 +123,6 @@
         ```bash
         ssh azureuser@<VM_PUBLIC_IP>
         ```  
-
     ![vm via ssh](<./images/vm via ssh.png>)  
 
     - To know the OS of the system  
