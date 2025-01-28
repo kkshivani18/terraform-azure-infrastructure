@@ -1,6 +1,6 @@
 # Terraform Azure Infrastructure
 
-- This project demonstrates the creation of a complete Azure infrastructure using Terraform. 
+- This is an introductory project demonstrates the creation of a complete Azure infrastructure using Terraform. 
 - It includes setting up resources such as a virtual network, subnet, network security group (NSG) and a virtual machine (VM). 
 - Docker is installed on the Azure VM using a customdata.tpl file, which provides a script for automation. The project is designed to showcase infrastructure automation and configuration management.
 
@@ -29,7 +29,7 @@
 | `azurerm_virtual_machine.az-vm`    | Virtual Machine where Docker is installed using `customdata.tpl`.                               |
 | `azurerm_subnet_network_security_group_association.sga` | Associates the subnet with the NSG for security enforcement.                                   |
 
-## Automated deployment of resources in the project via Terraform on Azure
+### Automated deployment of resources in the project via Terraform on Azure
 
 #### Resource Group (`azurerm_resource_group`):
 - Organizes all resources logically under a single group, making it easier to manage and delete.
@@ -40,7 +40,7 @@
 #### Network Security Group and Rules (`azurerm_network_security_group` & `azurerm_network_security_rule`):
 - Controls access to the VM by allowing only necessary traffic (HTTP and SSH).
 
-#### Public IP (azurerm_public_ip):
+#### Public IP (`azurerm_public_ip`):
 - Enables external access to the VM for SSH and Docker application testing.
 
 #### Virtual Machine (`azurerm_virtual_machine`):
@@ -73,6 +73,7 @@
     ```bash
     terraform init
     ```
+    ![terraform init](<./images/terraform init.png>)
 
 - Customize variables in terraform.tfvars.  
 
@@ -80,12 +81,18 @@
     ```bash
     terraform validate
     terraform plan
-    ```
+    ```  
+
+    ![terraform validate](<./images/terraform validate.png>)  
+
+    ![terraform plan](<./images/terraform plan.png>)
 
 - Apply the configuration to create resources:  
     ```bash
     terraform apply
-    ```
+    ```  
+
+    ![terraform apply](<./images/terraform apply.png>)
 
 - Verify Docker installation:  
     - SSH into the VM:  
